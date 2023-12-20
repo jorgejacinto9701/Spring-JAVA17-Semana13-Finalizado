@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReporteProveedor" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c680b46b-e3ce-4ddc-8575-4c440eb621cb">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idProveedor" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="4451d05a-c137-4fc1-93c9-331072e419d0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d1ac2666-3d06-4e76-8b1c-13930beae0b7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="30" uuid="6fef08a8-d319-45fb-ba79-b3e0f25c3ecf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="720ca8d0-be1a-4eff-a081-58379bbc6c09"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="a848fee4-a42e-4ae7-8f88-905d1d313885">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d1ac2666-3d06-4e76-8b1c-13930beae0b7"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idProveedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="30" uuid="502480a6-e72d-4511-912b-26385d4f1d1f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="720ca8d0-be1a-4eff-a081-58379bbc6c09"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

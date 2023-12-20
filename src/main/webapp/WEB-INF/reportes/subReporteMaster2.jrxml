@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReporteMaster2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b28f41d2-dd7b-4f1a-bedc-7a3da1245fbe">
+	<parameter name="SUBREPORT_EMPLEADO" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUBREPORT_PROVEEDOR" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="lstProveedor" class="java.util.ArrayList"/>
+	<field name="lstEmpleado" class="java.util.ArrayList"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="110" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="10" width="550" height="100" uuid="5089ac26-c1ca-4cb6-9660-dc6f5ffe7e01"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{lstEmpleado})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_EMPLEADO}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="82">
+			<subreport>
+				<reportElement x="2" y="0" width="550" height="82" uuid="5baf4556-7319-431e-9a95-086a311a9e57"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{lstProveedor})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_PROVEEDOR}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
